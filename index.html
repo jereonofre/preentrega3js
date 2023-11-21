@@ -53,12 +53,24 @@
             <div id="contenedor-productos" class="contenedor-productos">
 
             </div>
+
+            <form id="checkoutForm" action="/procesar_pago" method="post" onsubmit="return validarFormulario()">
+                
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="tarjeta">Número de tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" pattern="[0-9]{16}" placeholder="Ingrese los 16 dígitos" required>
+
+                <button type="submit">Finalizar compra</button>
+
         </main>
     </div>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/checkout.js"></script>
 </body>
     
 </html>
